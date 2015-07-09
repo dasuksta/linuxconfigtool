@@ -1,0 +1,17 @@
+Windows Registry Editor Version 5.00
+       
+       ; Win7_Samba3DomainMember
+       [HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanManWorkstation\Parameters]
+       "DNSNameResolutionRequired"=dword:00000000
+       "DomainCompatibilityMode"=dword:00000001
+       
+       ; Speedup settings
+       [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System]
+       "SlowLinkDetectEnabled"=dword:00000000
+       "DeleteRoamingCache"=dword:00000001
+       "WaitForNetwork"=dword:00000000
+       "CompatibleRUPSecurity"=dword:00000001
+       
+       ; Can drive you nuts
+       [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+       "EnableLUA"=dword:00000000
