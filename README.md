@@ -29,4 +29,4 @@ MONITORING TOOLS
  - MUNIN: System and network monitoring.
  - WEBMIN:Configure & monitor your system easily.
 
-The default aims to set up the system with sane defaults, all without the need for additional in-depth configuration knowledge.
+All without the need for additional in-depth configuration knowledge. The default configuration aims to setup the system with sane defaults, making customisations and opitmizations easier.
