@@ -9,18 +9,18 @@ Using wherever possible only official packages, these installation routines will
   - Configuring up to x4 Network Interfaces using Inteface Bridging.
   - Setting this system as a Gateway for your network.
   - Installing comand line monitoring tools and services.
-
+ 
  NETWORK INFARSTRUCTURE
   DNS      - Domain Name Services.
   DHCP     - Dynamic Host Configuration Services.
   NTP      - Network Time Services.
   LDAP     - Open LDAP Directory Server.
   KERBEROS - To secure services and get closer to SSO.
-  
+
  NETWORK SERVICES
   NFS   - Shares & Centralised Logins for Linux Clients.
   SMB   - Shares & Cnetralised Logins for Windows Clients.
-
+  
  COLLABORATION TOOLS
   GITLAB  - Gitlab Version Control server, configured with LDAP.
   SPARKEL - Sparkel Share <-> Dazzle Server for easy collabaration.
