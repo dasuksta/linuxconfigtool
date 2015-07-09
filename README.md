@@ -10,7 +10,7 @@ LOCALHOST NETWORKING
  - Setting this system as a Gateway for your network.
  - Installing comand line monitoring tools and services.
 
-NETWORK INFARSTRUCTURE - 
+NETWORK INFARSTRUCTURE
  - DNS: Domain Name Services.
  - DHCP: Dynamic Host Configuration Services.
  - NTP: Network Time Services.
