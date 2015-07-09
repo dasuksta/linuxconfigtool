@@ -31,4 +31,3 @@ Using wherever possible only official packages, these installation routines will
   WEBMIN - Configure & monitor your system easily.
 
 The default aims to set up the system with sane defaults, all without the need for additional in-depth configuration knowledge.
-
