@@ -17,8 +17,8 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 #--- Other Notes ---------------------------------------------------------------
-# All software, products and company names are trademarks™ or registered® 
-# trademarks of their respective authors/holders. Use of them does not imply 
+# All software, products and company names are trademarks™ or registered®
+# trademarks of their respective authors/holders. Use of them does not imply
 # any affiliation with or endorsement by them.
 #
 #--- Script Information --------------------------------------------------------
@@ -99,7 +99,7 @@ module='Install Dnsmasq DNS <-> DHCP Server'
 	if (whiptail --title "$module" --backtitle "$product for $distro $version - $url" --yesno --nocancel "
 Dnsmasq provides network infrastructure for small networks: DNS, DHCP, router \
 advertisement and network boot. It is designed to be lightweight and have a small \
-footprint, suitable for resource constrained routers and firewalls. 
+footprint, suitable for resource constrained routers and firewalls.
 
 Supported platforms include Linux (with glibc and uclibc), Android, *BSD, and Mac OS X. \
 Dnsmasq is included in most Linux distributions and the ports systems of FreeBSD, OpenBSD \
@@ -140,7 +140,7 @@ packages such as OpenLDAP are compiled with support for GnuTLS instead of OpenSS
 recent releases of Ubuntu.
 
 This will assist you in using the GnuTLS tools to generate certificates for the \
-verification of host identity and the encryption of client/server communications. 
+verification of host identity and the encryption of client/server communications.
 
 In order to enable TLS connections with this system, we need to setup and configure a \
 Certificate Authority to Issue and Sign security certificates from this host.
@@ -213,7 +213,7 @@ LDAP Account Manager (LAM) is a web-based interface for administering LDAP Serve
  2. Configure LAM for use with the LDAP Server.
  3. Create a Special Administrator that can:
 Adminster the LDAP Server & Create Local Home Directories for users.
- 
+
 Do you want to install and configure LDAP Account Manager?" 18 68)
 		then
 			./install-lam.sh
@@ -242,11 +242,19 @@ Home directories could be set up on the NFS server and made available throughout
 Ready to begin installation and configuration for file sharing and NFS Server for \
 centralised logins of *NIX clients.
 
-Select OK to continue..."  24 68
-# execute script
-./service-nfs.sh
+Do you want to install and configure NFS Server?"  24 68
+		then
+			./service-nfs.sh
+		else
+			continue
+		fi
+	}
+	else
+		continue
+	fi
+}
 
-# Whiptail yes no - to install Samba and configure it with Kerberos 
+# Whiptail yes no - to install Samba and configure it with Kerberos
 mainshare=`cat <$log | grep mainshare | awk '{print $3}'`
 module='Install SAMBA'
 {
@@ -276,7 +284,7 @@ Do you want to Install SAMBA and configure it with LDAP?" 22 68)
 module='Sparkel Share & Dazzle Server'
 {
 	if (whiptail --title "$module" --backtitle "$product for $distro $version - $url" --yesno --nocancel "
-Sparkle Share <- to -> Dazzle Server 
+Sparkle Share <- to -> Dazzle Server
 
 SparkleShare creates a special folder on your computer. You can add remotely hosted folders \
 (or \"projects\") to this folder. These projects will be automatically kept in sync with \
@@ -345,7 +353,7 @@ playing with no more effort.
 
 Using Munin you can easily monitor the performance of your computers, networks, SANs, \
 applications, weather measurements and whatever comes to mind. It makes it easy to \
-determine \"what's different today\" when a performance problem crops up. 
+determine \"what's different today\" when a performance problem crops up.
 It makes it easy to see how you're doing capacity-wise on any resources
 
 Do you want to the Install Install Munin Monitoring Tool? " 22 68)
@@ -388,7 +396,7 @@ Do you want to the Install Install Webmin? " 18 68)
    			if [ -f bwtheme.wbt.gz ] ; then
 				# Copying Webmin Bootstrap theme into public share
    				cp -v bwtheme.wbt.gz /mnt/public/
-   			else 
+   			else
 				wget http://theme.winfuture.it/bwtheme.wbt.gz
 				# Copying Webmin Bootstrap theme into public share
 				cp -v bwtheme.wbt.gz /mnt/public
@@ -449,7 +457,7 @@ echo "once completed, please ensure you secure access to this file" | cat >>$not
 echo "and the \"install.info\" file inside "scripts" folder." | cat >>$notes
 mv -v InstallNotes.txt ~
 
-# Removing all temporary files created during install 
+# Removing all temporary files created during install
 rm -rf *.temp
 rm -rf *.passwd
 rm br0.config
@@ -477,7 +485,7 @@ whiptail --title "$module" --backtitle "$product for $distro $version - $url" --
 Please see below system instalaltion summary.
 $install
 
-Select OK to continue..."  $max_h $max_w 
+Select OK to continue..."  $max_h $max_w
 
 # Whiptail menu to select interface configuration method.
 module='Power Down System'
